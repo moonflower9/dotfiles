@@ -1,3 +1,16 @@
+-- options
+vim.g.mapleader = " "
+vim.opt.number = true
+vim.opt.timeoutlen = 500
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
+vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.pack.add({
@@ -9,10 +22,8 @@ vim.pack.add({
 
 vim.cmd.colorscheme("miniwinter")
 
-require("mini.basics").setup()
 require("mini.comment").setup()
 require("mini.completion").setup()
-require("mini.diff").setup({ view = { style = "sign" } })
 require("mini.git").setup()
 require("mini.icons").setup()
 require("mini.indentscope").setup()
@@ -22,6 +33,9 @@ require("mini.pairs").setup()
 require("mini.snippets").setup()
 require("mini.statusline").setup()
 require("mini.surround").setup()
+
+require("mini.diff").setup({ view = { style = "sign" } })
+vim.keymap.set("n", "<leader>vd", MiniDiff.toggle_overlay, { desc = "toggle diff view" })
 
 require("mini.files").setup()
 vim.keymap.set("n", "<leader>fm", MiniFiles.open, { desc = "file manager" })
