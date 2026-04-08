@@ -44,3 +44,7 @@ This will create symlinks from the files in this repository to your $HOME direct
 - Make sure existing config files are backed up or removed before running stow.
 - This setup assumes the repo mirrors the $HOME directory structure.
 - Additional configs can be added directly to this repo using the same layout.
+- AMAZINGLY helpful blogs from people that are really smart:
+    - [echasnovski](https://echasnovski.com/blog/2026-03-13-a-guide-to-vim-pack.html)
+    - [Functional](https://justinhj.github.io/2026/04/06/refreshing-your-neovim-config-for-0-12-0.html)
+    - [Duy NG](https://tduyng.com/blog/neovim-basic-setup)
