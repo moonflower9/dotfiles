@@ -29,7 +29,6 @@ opt.showmatch = true
 opt.cmdheight = 1
 opt.showmode = false
 opt.pumheight = 10
-opt.completeopt = "menu,menuone,noselect"
 opt.synmaxcol = 300
 
 -- file handling
