@@ -5,7 +5,6 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/folke/trouble.nvim",
 	"https://github.com/stevearc/conform.nvim",
-	"https://github.com/neovim/nvim-lspconfig",
 })
 
 vim.cmd.colorscheme("miniwinter")
@@ -39,5 +38,3 @@ require("conform").setup({
 		lsp_format = "fallback",
 	},
 })
-
-vim.lsp.enable({ "lua_ls", "clangd", "rust_analyzer" })
