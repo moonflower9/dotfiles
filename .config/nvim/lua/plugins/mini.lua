@@ -2,8 +2,6 @@ local map = vim.keymap.set
 
 vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
 
-vim.cmd.colorscheme("miniwinter")
-
 require("mini.comment").setup()
 require("mini.completion").setup()
 require("mini.diff").setup({ view = { style = "sign" } })
