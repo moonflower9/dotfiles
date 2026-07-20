@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 vim.g.mapleader = " "
+vim.cmd.colorscheme("habamax")
 
 -- line numbers
 opt.number = true
@@ -14,7 +15,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
-opt.smartindent = true
+opt.smartindent = false
 opt.autoindent = true
 
 -- search
@@ -26,9 +27,9 @@ opt.hlsearch = false
 opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.showmatch = true
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.showmode = false
-opt.pumheight = 10
+opt.pumheight = 20
 opt.synmaxcol = 300
 
 -- file handling

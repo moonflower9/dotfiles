@@ -3,17 +3,37 @@ local map = vim.keymap.set
 vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
 
 require("mini.comment").setup()
-require("mini.completion").setup()
 require("mini.diff").setup({ view = { style = "sign" } })
 map("n", "<leader>vd", MiniDiff.toggle_overlay, { desc = "Toggle diff" })
-require("mini.files").setup()
-map("n", "<leader>fm", MiniFiles.open, { desc = "Open file manager" })
 require("mini.git").setup()
 require("mini.icons").setup()
 require("mini.indentscope").setup()
-require("mini.move").setup()
 require("mini.notify").setup()
 require("mini.pairs").setup()
-require("mini.snippets").setup()
-require("mini.statusline").setup()
+local statusline = require("mini.statusline")
+local statusline_active = function()
+	local mode, mode_hl = statusline.section_mode({ trunc_width = 120 })
+	local git = statusline.section_git({ trunc_width = 75 })
+	local diagnostics = statusline.section_diagnostics({ trunc_width = 75 })
+	local lsp = statusline.section_lsp({ trunc_width = 75 })
+	local filename = statusline.section_filename({ trunc_width = 140 })
+	local fileinfo = statusline.section_fileinfo({ trunc_width = 120 })
+	local location = statusline.section_location({ trunc_width = 75 })
+	local search = statusline.section_searchcount({ trunc_width = 75 })
+
+	return statusline.combine_groups({
+		{ hl = mode_hl, strings = { mode } },
+		{ hl = "MiniStatuslineDevinfo", strings = { git, diagnostics, lsp } },
+		"%<",
+		{ hl = "MiniStatuslineFilename", strings = { filename } },
+		"%=",
+		{ hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
+		{ hl = mode_hl, strings = { search, location } },
+	})
+end
+statusline.setup({ content = { active = statusline_active } })
 require("mini.surround").setup()
+require("mini.pick").setup()
+map("n", "<leader>ff", MiniPick.builtin.files, { desc = "Find files" })
+map("n", "<leader>fb", MiniPick.builtin.buffers, { desc = "Find buffers" })
+map("n", "<leader>fg", MiniPick.builtin.grep_live, { desc = "Live grep" })

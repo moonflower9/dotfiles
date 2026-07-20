@@ -17,10 +17,4 @@ vim.diagnostic.config({
 		source = "if_many",
 		prefix = "󰜥",
 	},
-	linehl = {
-		[sev.ERROR] = "DiagnosticErrorLine",
-		[sev.WARN] = "DiagnosticWarnLine",
-		[sev.INFO] = "DiagnosticInfoLine",
-		[sev.HINT] = "DiagnosticHintLine",
-	},
 })
