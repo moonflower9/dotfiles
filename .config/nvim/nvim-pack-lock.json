@@ -9,7 +9,7 @@
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
     },
     "mini.nvim": {
-      "rev": "11afe78a10570fe1d0c7ed0b6fc2b5b19098cb45",
+      "rev": "a35f08f63b73f0ffac045cd175fb2a22e167c39c",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-treesitter": {
