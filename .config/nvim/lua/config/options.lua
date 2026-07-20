@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 vim.g.mapleader = " "
+opt.termguicolors = true
 vim.cmd.colorscheme("habamax")
 
 -- line numbers
@@ -31,6 +32,7 @@ opt.cmdheight = 0
 opt.showmode = false
 opt.pumheight = 20
 opt.synmaxcol = 300
+opt.foldlevelstart = 99
 
 -- file handling
 opt.backup = false

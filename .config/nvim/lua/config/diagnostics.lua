@@ -9,7 +9,7 @@ vim.diagnostic.config({
 			[sev.ERROR] = "",
 			[sev.WARN] = "",
 			[sev.INFO] = "",
-			[sev.HINT] = "󰌵 ",
+			[sev.HINT] = "󰌵",
 		},
 	},
 	virtual_text = {
