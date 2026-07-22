@@ -19,15 +19,3 @@ alias la='eza -a --color=always --group-directories-first --icons=always'  # all
 alias ll='eza -l --color=always --group-directories-first --icons=always'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons=always' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                          # show only dotfiles
-
-# Updating
-alias update='sudo pacman -Syu'
-
-# Get fastest mirrors
-alias mirror="sudo cachyos-rate-mirrors"
-
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
-
-# Fastfetch
-alias ff='fastfetch'
