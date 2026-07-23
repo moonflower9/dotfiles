@@ -1,44 +1,42 @@
-local opt = vim.opt
-
 vim.g.mapleader = " "
-opt.termguicolors = true
-vim.cmd.colorscheme("habamax")
+vim.opt.termguicolors = true
 
 -- line numbers
-opt.number = true
-opt.relativenumber = true
-opt.cursorline = true
-opt.scrolloff = 10
-opt.sidescrolloff = 8
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 8
 
 -- indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.expandtab = true
-opt.smartindent = false
-opt.autoindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = false
+vim.opt.autoindent = true
 
 -- search
-opt.ignorecase = true
-opt.smartcase = true
-opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false
 
 -- visuals
-opt.termguicolors = true
-opt.signcolumn = "yes"
-opt.showmatch = true
-opt.cmdheight = 0
-opt.showmode = false
-opt.pumheight = 20
-opt.synmaxcol = 300
-opt.foldlevelstart = 99
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("habamax")
+vim.opt.signcolumn = "yes"
+vim.opt.showmatch = true
+vim.opt.cmdheight = 0
+vim.opt.showmode = false
+vim.opt.pumheight = 20
+vim.opt.synmaxcol = 300
+vim.opt.foldlevelstart = 99
 
 -- file handling
-opt.backup = false
-opt.writebackup = false
-opt.swapfile = false
-opt.updatetime = 300
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+vim.opt.updatetime = 300
 
 -- clipboard :)
-opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
