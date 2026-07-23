@@ -1,10 +1,8 @@
-local map = vim.keymap.set
-
 vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
 
 require("mini.comment").setup()
 require("mini.diff").setup({ view = { style = "sign" } })
-map("n", "<leader>vd", require("mini.diff").toggle_overlay, { desc = "Toggle diff" })
+vim.keymap.set("n", "<leader>vd", require("mini.diff").toggle_overlay, { desc = "Toggle diff" })
 require("mini.git").setup()
 require("mini.icons").setup()
 require("mini.indentscope").setup()
@@ -35,6 +33,6 @@ end
 statusline.setup({ content = { active = statusline_active } })
 require("mini.surround").setup()
 require("mini.pick").setup()
-map("n", "<leader>ff", require("mini.pick").builtin.files, { desc = "Find files" })
-map("n", "<leader>fb", require("mini.pick").builtin.buffers, { desc = "Find buffers" })
-map("n", "<leader>fg", require("mini.pick").builtin.grep_live, { desc = "Live grep" })
+vim.keymap.set("n", "<leader>ff", require("mini.pick").builtin.files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>fb", require("mini.pick").builtin.buffers, { desc = "Find buffers" })
+vim.keymap.set("n", "<leader>fg", require("mini.pick").builtin.grep_live, { desc = "Live grep" })
