@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.opt.termguicolors = true
 
 -- line numbers
 vim.opt.number = true
