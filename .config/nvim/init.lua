@@ -1,3 +1,4 @@
 -- entry point
-require("config")
-require("plugins")
+require("set")
+require("keymaps")
+require("lsp")
