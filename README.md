@@ -22,8 +22,7 @@ pacman -S git
 
 ## Installation
 
-Clone the repository somewhere outside of your home directory
-(commonly ~/dotfiles):
+Clone the repository into your home directory (commonly ~/dotfiles):
 
 ```
 git clone https://github.com/moonflower9/dotfiles.git ~/dotfiles
