@@ -17,7 +17,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme("habamax")
 vim.opt.showmode = false
 
 vim.opt.foldlevel = 99
