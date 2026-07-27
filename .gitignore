@@ -1,6 +1,0 @@
-# Fish auto-managed state (machine-specific, not portable)
-.config/fish/fish_variables
-.config/fish/fish_history
-
-# Backup files produced by the `backup` alias
-*.bak
