@@ -3,6 +3,9 @@ require("conform").setup({
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 		c = { "clang-format" },
+		bash = { "shfmt" },
+		sh = { "shfmt" },
+		zsh = { "shfmt" },
 	},
 	format_on_save = {
 		timeout_ms = 750,
