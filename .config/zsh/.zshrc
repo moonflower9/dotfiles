@@ -1,5 +1,5 @@
 # apply pywal theme
-(cat ~/.cache/wal/sequences &)
+cat ~/.cache/wal/sequences
 
 # source global shell alias & variables files
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
@@ -8,6 +8,8 @@
 # requires zsh-syntax-highlighting package
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# welcome
+print -P "it's   %F{2}$(date +'%I:%M%P')   %F{3}${$(uptime -p)#up }   %F{4}$(uname -r)%f"
+
 # set up prompt
-NEWLINE=$'\n'
-PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0}$(date +%_I:%M%P) %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k ❯ " # nord theme
+PROMPT=$'\n'"%K{0}%F{7} $SHELL %K{8}%F{0} %n %K{4}%F{7} %~ %f%k ❯ "
