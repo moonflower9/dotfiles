@@ -27,7 +27,7 @@ conflicting each other:
 
 ```
 common/    # display-server-agnostic: nvim, mpv, shell, zsh
-x11/       # X11-only: .xinitrc, .Xresources, picom (+ dwm/dwmblocks)
+x11/       # X11-only: .xinitrc, .Xresources, picom
 wayland/   # Wayland-only: sway (+ bar/launcher/wallpaper)
 ```
 
@@ -67,6 +67,15 @@ cd ~/dotfiles
 stow -D .          # remove the old single-package symlinks
 stow common x11    # re-stow with the new split packages
 ```
+
+## X11 package (dwm)
+
+The `x11/` package targets [dwm](https://dwm.suckless.org). `.xinitrc` starts
+picom, seeds pywal colors with `wal -i "$WALLPAPER"`, sets the wallpaper with
+feh, then runs `dwmblocks` and `dwm` in restart loops. dwm and dwmblocks are
+not bundled here — build and install them yourself (from your own forks or
+upstream) before running `startx`. `$WALLPAPER` comes from `~/.xprofile`, which
+isn't stowed; create it yourself, e.g. `export WALLPAPER=/path/to/image.png`.
 
 ## Wayland package (sway)
 

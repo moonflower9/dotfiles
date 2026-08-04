@@ -11,25 +11,6 @@ set $menu wmenu-run
 
 set $wallpaper ~/Pictures/wallpapers/nature.png
 
-set $background #211c12
-set $foreground #c1bdac
-set $color0 #211c12
-set $color1 #56624E
-set $color2 #70704C
-set $color3 #905433
-set $color4 #917251
-set $color5 #798564
-set $color6 #9D8B34
-set $color7 #c1bdac
-set $color8 #878478
-set $color9 #56624E
-set $color10 #70704C
-set $color11 #905433
-set $color12 #917251
-set $color13 #798564
-set $color14 #9D8B34
-set $color15 #c1bdac
-
 include ~/.cache/wal/colors-sway
 
 ### Output configuration
@@ -219,6 +200,6 @@ bar {
 
 ### Autostart
 #
-exec wal -i $wallpaper -n -s -e -q
+exec wal -i $wallpaper -n -s -q
 
 include /etc/sway/config.d/*
