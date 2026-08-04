@@ -28,7 +28,7 @@ conflicting each other:
 ```
 common/    # display-server-agnostic: nvim, mpv, shell, zsh
 x11/       # X11-only: .xinitrc, .Xresources, picom (+ dwm/dwmblocks)
-wayland/   # Wayland-only: dwc (+ bar/launcher/wallpaper)
+wayland/   # Wayland-only: sway (+ bar/launcher/wallpaper)
 ```
 
 Install only the packages you want; `common` is always needed.
@@ -68,14 +68,16 @@ stow -D .          # remove the old single-package symlinks
 stow common x11    # re-stow with the new split packages
 ```
 
-## Wayland package (dwc)
+## Wayland package (sway)
 
-The `wayland/` package targets [dwc](https://git.sr.ht/~corg/DWC), a dynamic
-(= dwm-style) compositor built on [neuswc](https://git.sr.ht/~shrub900/neuswc),
-following the [wayland.fyi](https://wayland.fyi) minimalist stack. Like dwm, dwc
-is configured by editing `config.h` in its source tree and recompiling, so there
-is no runtime config file to stow in the usual sense — keep your `config.h` in
-`wayland/.config/dwc/` and copy/symlink it into the dwc build directory.
+The `wayland/` package targets [sway](https://swaywm.org), the i3-compatible
+Wayland compositor. The config lives at `wayland/.config/sway/config` and is
+themed with pywal: the wallpaper, sway bar, window borders and foot terminal
+colors are all derived from a single image via pywal templates
+(`wayland/.config/wal/templates/colors-foot.ini`, plus pywal's built-in
+`colors-sway`). On first login — or after changing the wallpaper — run
+`wal -i <path/to/image>` once to seed `~/.cache/wal/` so the generated color
+files exist before sway and foot read them.
 
 ## Notes
 
