@@ -9,6 +9,8 @@ sleep 0.5
 
 # set colorscheme with wal + merge with xrdb + cursor
 wal -i "$WALLPAPER" -q
+xrdb -merge ~/.cache/wal/colors.Xresources
+xrdb -merge ~/.cache/wal/dwm
 xrdb -merge ~/.Xresources
 xsetroot -cursor_name left_ptr
 

@@ -1,5 +1,2 @@
-#include "/home/moon/.cache/wal/dwm"
-#include "/home/moon/.cache/wal/colors.Xresources"
-
 Xcursor.theme: Neutral
 Xcursor.size: 24
