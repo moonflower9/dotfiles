@@ -24,6 +24,8 @@ vim.opt.foldlevel = 99
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
+vim.opt.undofile = true
+vim.opt.autoread = true
 vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
