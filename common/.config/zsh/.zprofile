@@ -4,3 +4,7 @@
 # default programs
 export EDITOR="nvim"
 export BROWSER="firefox"
+
+# cursor theme (read by sway at startup; overridden for X apps by Xresources)
+export XCURSOR_THEME="Neutral"
+export XCURSOR_SIZE=24

@@ -72,21 +72,31 @@ stow common x11    # re-stow with the new split packages
 
 The `x11/` package targets [dwm](https://dwm.suckless.org). `.xinitrc` starts
 picom, seeds pywal colors with `wal -i "$WALLPAPER"`, sets the wallpaper with
-feh, then runs `dwmblocks` and `dwm` in restart loops. dwm and dwmblocks are
-not bundled here — build and install them yourself (from your own forks or
-upstream) before running `startx`. `$WALLPAPER` comes from `~/.xprofile`, which
-isn't stowed; create it yourself, e.g. `export WALLPAPER=/path/to/image.png`.
+feh, then runs `dwmblocks` and `dwm` in restart loops. The terminal is
+[st](https://st.suckless.org); like dwm and dwmblocks it is not bundled here —
+build and install it yourself (from your own forks or upstream) before running
+`startx`. `$WALLPAPER` comes from `~/.xprofile`, which isn't stowed; create it
+yourself, e.g. `export WALLPAPER=/path/to/image.png`.
+
+Runtime deps: `picom`, `feh`, `pywal`, `xorg-xrdb`, `xorg-xsetroot`, plus
+dwm/dwmblocks/st built and installed separately.
 
 ## Wayland package (sway)
 
 The `wayland/` package targets [sway](https://swaywm.org), the i3-compatible
 Wayland compositor. The config lives at `wayland/.config/sway/config` and is
-themed with pywal: the wallpaper, sway bar, window borders and foot terminal
-colors are all derived from a single image via pywal templates
+themed with pywal: the sway bar, window borders and foot terminal colors are
+all derived from a single image via pywal templates
 (`wayland/.config/wal/templates/colors-foot.ini`, plus pywal's built-in
-`colors-sway`). On first login — or after changing the wallpaper — run
-`wal -i <path/to/image>` once to seed `~/.cache/wal/` so the generated color
-files exist before sway and foot read them.
+`colors-sway`). The wallpaper path lives in `~/.config/sway/local` (a single
+`set $wallpaper /path/to/image.png` line), which isn't stowed so the repo
+stays portable — create it yourself before first login. On first login — or
+after changing the wallpaper — run `wal -i <path/to/image>` once to seed
+`~/.cache/wal/` so the generated color files exist before sway and foot read
+them.
+
+Runtime deps: `sway`, `foot`, `wmenu`, `grim`, `slurp`, `wl-clipboard`,
+`playerctl`, `pipewire-pulse` (pactl), `lm_sensors` (sensors), `pywal`.
 
 ## Notes
 

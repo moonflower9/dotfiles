@@ -4,5 +4,7 @@ c="clear" \
 v="nvim" \
 ls="ls -la --color=auto --group-directories-first" \
 grep="grep --color=auto" \
-shell="exec $SHELL -l" \
-fk="sudo !!" \
+shell="exec $SHELL -l"
+
+# re-run the last command under sudo (zsh doesn't expand !! inside an alias)
+fk() { sudo fc -s }
