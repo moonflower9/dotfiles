@@ -9,7 +9,6 @@ set $right l
 set $term foot
 set $menu wmenu-run
 
-# wallpaper lives in ~/.config/sway/local (not stowed) so the repo stays portable
 include ~/.config/sway/local
 
 include ~/.cache/wal/colors-sway
