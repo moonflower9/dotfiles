@@ -43,7 +43,8 @@ installed separately for full functionality:
 
 Plugins are managed with `vim.pack` and pinned via
 `common/.config/nvim/nvim-pack-lock.json`; they install automatically on first
-launch.
+launch. LSP configs live in `common/.config/nvim/lsp/` and are auto-discovered
+by `vim.lsp.enable()`.
 
 ## Installation
 
@@ -68,17 +69,6 @@ stow common x11 wayland
 ```
 
 This will create symlinks from the files in this repository to your $HOME directory.
-
-### Upgrading from the old single-package layout
-
-If you previously ran `stow .` against this repo, unstow it first or the new
-package layout will clash with the existing symlinks:
-
-```
-cd ~/dotfiles
-stow -D .          # remove the old single-package symlinks
-stow common x11    # re-stow with the new split packages
-```
 
 ## X11 package (dwm)
 
