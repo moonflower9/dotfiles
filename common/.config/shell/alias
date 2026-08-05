@@ -1,9 +1,7 @@
-alias \
-\
-c="clear" \
-v="nvim" \
-ls="ls -la --color=auto --group-directories-first" \
-grep="grep --color=auto" \
-shell="exec $SHELL -l"
+alias c="clear"
+alias v="nvim"
+alias ls="ls -la --color=auto --group-directories-first"
+alias grep="grep --color=auto"
+alias shell="exec $SHELL -l"
 
-fk() { sudo fc -s }
+fk() { sudo fc -s; }

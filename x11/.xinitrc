@@ -3,9 +3,8 @@
 # source xprofile (WALLPAPER, display etc.)
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-# start picom compositor + make sure it has time to start
+# start picom compositor
 picom --config ~/.config/picom/picom.conf &
-sleep 0.5
 
 # set colorscheme with wal + merge with xrdb + cursor
 wal -i "$WALLPAPER" -q

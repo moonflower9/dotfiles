@@ -83,7 +83,7 @@ stow common x11    # re-stow with the new split packages
 ## X11 package (dwm)
 
 The `x11/` package targets [dwm](https://dwm.suckless.org). `.xinitrc` starts
-picom, seeds pywal colors with `wal -i "$WALLPAPER"`, sets the wallpaper with
+picom, seeds pywal colors with `wal -i "$WALLPAPER" -q`, sets the wallpaper with
 feh, then runs `dwmblocks` and `dwm` in restart loops. The terminal is
 [st](https://st.suckless.org); like dwm and dwmblocks it is not bundled here —
 build and install it yourself (from your own forks or upstream) before running

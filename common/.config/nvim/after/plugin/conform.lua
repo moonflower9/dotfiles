@@ -3,6 +3,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 		c = { "clang-format" },
+		cpp = { "clang-format" },
 		bash = { "shfmt" },
 		sh = { "shfmt" },
 		zsh = { "shfmt" },

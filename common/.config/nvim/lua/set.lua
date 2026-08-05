@@ -16,10 +16,8 @@ vim.opt.incsearch = true
 
 vim.opt.completeopt = { "menu", "noselect" }
 
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 vim.opt.showmode = false
-
-vim.opt.foldlevel = 99
 
 vim.opt.backup = false
 vim.opt.writebackup = false
