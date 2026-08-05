@@ -11,13 +11,11 @@ local root_markers2 = {
 	"selene.yml",
 }
 
----@type vim.lsp.Config
 return {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
 	root_markers = vim.fn.has("nvim-0.11.3") == 1 and { root_markers1, root_markers2, { ".git" } }
 		or vim.list_extend(vim.list_extend(root_markers1, root_markers2), { ".git" }),
-	---@type lspconfig.settings.lua_ls
 	settings = {
 		Lua = {
 			codeLens = { enable = true },
