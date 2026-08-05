@@ -1,10 +1,4 @@
-vim.diagnostic.config({
-	virtual_text = false,
-	signs = true,
-	underline = true,
-	update_in_insert = false,
-	severity_sort = true,
-})
+vim.diagnostic.config({ virtual_text = true, underline = true, severity_sort = true })
 
 vim.keymap.set("n", "<leader>dn", function()
 	vim.diagnostic.jump({ count = 1, float = true })

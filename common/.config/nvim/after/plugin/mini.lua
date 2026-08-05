@@ -2,7 +2,6 @@ require("mini.comment").setup()
 require("mini.diff").setup({ view = { style = "sign" } })
 require("mini.git").setup()
 require("mini.icons").setup()
-require("mini.completion").setup()
 require("mini.surround").setup()
 require("mini.pick").setup()
 

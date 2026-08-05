@@ -33,6 +33,18 @@ wayland/   # Wayland-only: sway (+ bar/launcher/wallpaper)
 
 Install only the packages you want; `common` is always needed.
 
+### Neovim dependencies
+
+The nvim config (in `common`) enables LSP servers and formatters that must be
+installed separately for full functionality:
+
+- LSP servers: `lua-language-server`, `rust-analyzer`, `clangd`
+- Formatters: `stylua`, `rustfmt`, `clang-format`, `shfmt`
+
+Plugins are managed with `vim.pack` and pinned via
+`common/.config/nvim/nvim-pack-lock.json`; they install automatically on first
+launch.
+
 ## Installation
 
 Clone the repository into your home directory (commonly ~/dotfiles):
