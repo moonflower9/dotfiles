@@ -1,20 +1,18 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "layer": "top",
+    "position": "top",
     "spacing": 5,
     "modules-left": [
         "custom/power",
-        "ext/workspaces",
-        "dwl/window"
-        //"hyprland/mode",
+        "ext/workspaces"
     ],
     "modules-center": [
         "clock",
-        "custom/weather" // remove if you dont use it
+        "custom/weather"
     ],
     "modules-right": [
         "tray",
+        "custom/spacer",
         "bluetooth",
         "pulseaudio",
         "network",
@@ -22,20 +20,9 @@
         "cpu",
         "memory",
         "temperature",
-        "custom/spacer"
+        "custom/spacer",
+        "custom/uptime"
     ],
-    "hyprland/workspaces": {
-        "separate-outputs": true,
-        "disable-scroll": true,
-        "all-outputs": false,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
-    },
     "ext/workspaces": {
         "format": "{icon}",
         "ignore-hidden": true,
@@ -43,86 +30,9 @@
         "on-click-right": "deactivate",
         "sort-by-id": true
     },
-    "dwl/window": {
-        "format": "[{layout}]"
-    },
-    "keyboard-state": {
-        "interval": "10",
-        "numlock": true,
-        "capslock": true,
-        "format": {
-            "capslock": "Caps: {icon}  ",
-            "numlock": "Num: {icon}"
-        },
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "hyprland/submap": {
-        "format": "✌️ {}",
-        "max-length": 8,
-        "tooltip": false
-    },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "scratch",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "custom/music": {
-        "format": "  {}",
-        "escape": true,
-        "interval": 5,
-        "tooltip": false,
-        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
-        "on-click": "playerctl play-pause",
-        "max-length": 50
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
         "icon-size": 18,
-        "spacing": 6,
-        "icons": {
-            "blueman": "bluetooth",
-            "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        }
+        "spacing": 6
     },
     "bluetooth": {
         "format": "󰂲",
@@ -140,7 +50,7 @@
     "clock": {
         "timezone": "Pacific/Auckland",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M - %A, %d}",
+        "format": "{:%H:%M - %A}",
         "format-alt": "{:%d-%m-%y}",
         "on-click-right": "notify-send -a 'Clock' 'Today is: ' \"$(date '+%d-%m-%y')\"",
         "interval": 60
@@ -152,7 +62,8 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format": "Load: {load}"
     },
     "memory": {
         "interval": 5,
@@ -171,7 +82,6 @@
         ]
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "󰈀 ",
         "format-linked": "{ifname} (No IP) 󰩟 ",
@@ -180,7 +90,6 @@
         "on-click-right": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -202,22 +111,10 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
     "custom/power": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "systemctl poweroff"
+        "on-click": "wlogout"
     },
     "custom/spacer": {
         "format": "│",
@@ -230,6 +127,6 @@
         ],
         "tooltip-format": "Uptime: {}",
         "interval": 1600,
-        "exec": "$HOME/.config/waybar/scripts/uptime.sh"
+        "exec": "~/.config/waybar/scripts/uptime.sh"
     }
 }
