@@ -1,0 +1,185 @@
+@import url("file:///home/moon/.cache/wal/colors-waybar.css");
+
+* {
+    border: none;
+    font-family: 'NotoSansM Nerd Font Mono', monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+tooltip {
+    font-family: 'NotoSansM Nerd Font Mono';
+    border-radius: 6px;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+    padding: 2px 6px;
+}
+
+#window {
+    font-weight: bold;
+    font-family: 'NotoSansM Nerd Font Mono';
+}
+
+/* WORKSPACES */
+#workspaces button {
+    padding: 0 6px;
+    margin: 2px;
+    background: transparent;
+    color: @foreground;
+}
+
+#workspaces button.active {
+    background: @color8;
+    color: @color6;
+    border-radius: 6px;
+}
+
+#workspaces button.urgent {
+    color: @color1;
+    border-radius: 6px;
+}
+
+#workspaces button:hover {
+    background: @color8;
+    color: @foreground;
+    border-radius: 6px;
+}
+
+#mode {
+    background: @color8;
+    border-bottom: 3px solid @foreground;
+}
+
+/* Modules shared style */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#power-profiles-daemon,
+#temperature,
+#backlight,
+#keyboard-state,
+#scratchpad,
+#mpd,
+#tray,
+#bluetooth,
+#custom-weather,
+#custom-pomodoro,
+#custom-power,
+#custom-media,
+#custom-uptime,
+#custom-stocks {
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+/* Hover effect for all modules */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#power-profiles-daemon:hover,
+#temperature:hover,
+#backlight:hover,
+#keyboard-state:hover,
+#scratchpad:hover,
+#mpd:hover,
+#tray:hover,
+#bluetooth:hover,
+#custom-weather:hover,
+#custom-pomodoro:hover,
+#custom-power:hover,
+#custom-media:hover,
+#custom-uptime:hover
+#custom-stocks:hover {
+    background: @color8;
+    border-radius: 6px;
+}
+
+#clock {
+    color: @color6;
+    font-weight: bold;
+}
+
+#pulseaudio {
+    color: @color2;
+}
+
+#pulseaudio.muted {
+    color: @color8;
+}
+
+#network {
+    color: @color4;
+}
+
+#network.disconnected {
+    color: @color1;
+}
+
+#battery {
+    color: @color4;
+    background: transparent;
+}
+
+#battery.charging {
+    color: @color4;
+}
+
+#battery.warning {
+    color: @color6;
+}
+
+#battery.critical {
+    color: @color1;
+}
+
+#cpu {
+    color: @color6;
+}
+
+#memory {
+    color: @color5;
+}
+
+#temperature {
+    color: @color3;
+}
+
+#bluetooth {
+    color: @color4;
+}
+
+#custom-weather {
+    color: @color4;
+}
+
+#custom-pomodoro {
+    color: @color5;
+}
+
+#custom-power {
+    color: @color6;
+    font-weight: bold;
+}
+
+#custom-media {
+    color: @color2;
+}
+
+#custom-uptime {
+    color: @color4;
+}
+
+#custom-spacer {
+    color: @color8;
+    padding: 0 2px;
+    margin: 0 2px;
+}

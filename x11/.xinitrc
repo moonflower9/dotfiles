@@ -7,7 +7,7 @@
 picom --config ~/.config/picom/picom.conf &
 
 # set colorscheme with wal + merge with xrdb + cursor
-wal -i "$WALLPAPER" -q
+wal -i "$WALLPAPER" -q -o ~/.config/wal/post-hook.sh
 xrdb -merge ~/.cache/wal/colors.Xresources
 xrdb -merge ~/.cache/wal/dwm
 xrdb -merge ~/.Xresources

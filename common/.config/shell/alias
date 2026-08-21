@@ -5,3 +5,5 @@ alias grep="grep --color=auto"
 alias shell="exec $SHELL -l"
 
 fk() { sudo fc -s; }
+
+wal() { command wal "$@" -o "$HOME/.config/wal/post-hook.sh"; }

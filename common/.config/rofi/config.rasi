@@ -1,0 +1,15 @@
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    modi: "drun,run,window";
+    font: "NotoSansM Nerd Font Mono 14";
+    show-icons: true;
+    icon-theme: "Adwaita";
+    drun-display-format: "{name}";
+    window-format: "{w}    {i}{c}   {t}";
+    scroll-method: 0;
+}
+
+window {
+    width: 35%;
+}
