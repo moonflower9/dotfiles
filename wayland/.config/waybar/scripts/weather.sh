@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO: Configure your .env in ~/dotfiles/.env nor change the dir below:
+# TODO: Configure your .env in ~/dotfiles/.env or change the dir below:
 DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
 if [ -f "$DOTFILES_DIR/.env" ]; then
   source "$DOTFILES_DIR/.env"
