@@ -4,6 +4,6 @@ alias ls="ls -la --color=auto --group-directories-first"
 alias grep="grep --color=auto"
 alias shell="exec $SHELL -l"
 
-fk() { sudo fc -s; }
+fk() { doas sh -c "$(fc -ln -1)" }
 
 wal() { command wal "$@" -o "$HOME/.config/wal/post-hook.sh"; }
