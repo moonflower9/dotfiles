@@ -1,7 +1,6 @@
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		rust = { "rustfmt" },
 		c = { "clang-format" },
 		cpp = { "clang-format" },
 		bash = { "shfmt" },

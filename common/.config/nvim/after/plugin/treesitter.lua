@@ -1,0 +1,9 @@
+require("nvim-treesitter").install({
+	"lua",
+	"c",
+	"cpp",
+	"bash",
+	"json",
+	"vim",
+	"query",
+})
