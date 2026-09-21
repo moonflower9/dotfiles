@@ -1,15 +1,34 @@
-@import url("file:///home/moon/.cache/wal/colors-waybar.css");
+@define-color foreground #c5c5c5;
+@define-color background #1a1a1a;
+@define-color cursor #c5c5c5;
+
+@define-color color0 #1a1a1a;
+@define-color color1 #ff8800;
+@define-color color2 #9a9a9a;
+@define-color color3 #ff8800;
+@define-color color4 #c5c5c5;
+@define-color color5 #9a9a9a;
+@define-color color6 #ff8800;
+@define-color color7 #e0e0e0;
+@define-color color8 #3a3a3a;
+@define-color color9 #ff8800;
+@define-color color10 #c5c5c5;
+@define-color color11 #ff8800;
+@define-color color12 #e0e0e0;
+@define-color color13 #c5c5c5;
+@define-color color14 #ff8800;
+@define-color color15 #ffffff;
 
 * {
     border: none;
     font-family: 'NotoSansM Nerd Font Mono', monospace;
-    font-size: 14px;
+    font-size: 17px;
     min-height: 0;
 }
 
 tooltip {
     font-family: 'NotoSansM Nerd Font Mono';
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 window#waybar {
@@ -18,87 +37,30 @@ window#waybar {
     padding: 2px 6px;
 }
 
-#window {
-    font-weight: bold;
-    font-family: 'NotoSansM Nerd Font Mono';
-}
-
-/* WORKSPACES */
-#workspaces button {
-    padding: 0 6px;
-    margin: 2px;
-    background: transparent;
-    color: @foreground;
-}
-
-#workspaces button.active {
-    background: @color8;
-    color: @color6;
-    border-radius: 6px;
-}
-
-#workspaces button.urgent {
-    color: @color1;
-    border-radius: 6px;
-}
-
-#workspaces button:hover {
-    background: @color8;
-    color: @foreground;
-    border-radius: 6px;
-}
-
-#mode {
-    background: @color8;
-    border-bottom: 3px solid @foreground;
-}
-
 /* Modules shared style */
 #clock,
-#battery,
 #cpu,
 #memory,
 #network,
 #pulseaudio,
-#power-profiles-daemon,
 #temperature,
-#backlight,
-#keyboard-state,
-#scratchpad,
-#mpd,
 #tray,
-#bluetooth,
-#custom-weather,
-#custom-pomodoro,
 #custom-power,
-#custom-media,
-#custom-uptime,
-#custom-stocks {
+#custom-uptime {
     padding: 0 6px;
     margin: 0 2px;
 }
 
 /* Hover effect for all modules */
 #clock:hover,
-#battery:hover,
 #cpu:hover,
 #memory:hover,
 #network:hover,
 #pulseaudio:hover,
-#power-profiles-daemon:hover,
 #temperature:hover,
-#backlight:hover,
-#keyboard-state:hover,
-#scratchpad:hover,
-#mpd:hover,
 #tray:hover,
-#bluetooth:hover,
-#custom-weather:hover,
-#custom-pomodoro:hover,
 #custom-power:hover,
-#custom-media:hover,
-#custom-uptime:hover
-#custom-stocks:hover {
+#custom-uptime:hover {
     background: @color8;
     border-radius: 6px;
 }
@@ -124,54 +86,21 @@ window#waybar {
     color: @color1;
 }
 
-#battery {
-    color: @color4;
-    background: transparent;
-}
-
-#battery.charging {
-    color: @color4;
-}
-
-#battery.warning {
-    color: @color6;
-}
-
-#battery.critical {
-    color: @color1;
-}
-
 #cpu {
     color: @color6;
 }
 
 #memory {
-    color: @color5;
+    color: @color6;
 }
 
 #temperature {
     color: @color3;
 }
 
-#bluetooth {
-    color: @color4;
-}
-
-#custom-weather {
-    color: @color4;
-}
-
-#custom-pomodoro {
-    color: @color5;
-}
-
 #custom-power {
     color: @color6;
     font-weight: bold;
-}
-
-#custom-media {
-    color: @color2;
 }
 
 #custom-uptime {
