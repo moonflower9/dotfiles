@@ -1,4 +1,22 @@
-@import "~/.cache/wal/colors-rofi.rasi"
+* {
+    accent: #ff8800;
+    background: #1a1a1a;
+    foreground: #c5c5c5;
+    normal-background: #1a1a1a;
+    normal-foreground: #c5c5c5;
+    selected-normal-background: #ff8800;
+    selected-normal-foreground: #1a1a1a;
+    active-background: #262626;
+    active-foreground: #c5c5c5;
+    selected-active-background: #ff8800;
+    selected-active-foreground: #1a1a1a;
+    urgent-background: #262626;
+    urgent-foreground: #ff8800;
+    selected-urgent-background: #ff8800;
+    selected-urgent-foreground: #1a1a1a;
+    alternate-normal-background: #1a1a1a;
+    alternate-normal-foreground: #c5c5c5;
+}
 
 configuration {
     modi: "drun,run,window";
@@ -13,6 +31,7 @@ configuration {
 window {
     width: 35%;
     border: 2px solid;
+    border-color: var(accent);
     border-radius: 8px;
     padding: 2.5ch;
 }
