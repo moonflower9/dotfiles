@@ -1,8 +1,0 @@
-dwm.font:           monospace:size=10
-dwm.dmenufont:      monospace:size=10
-dwm.background:     {color0}
-dwm.foreground:     {color15}
-dwm.backgroundSel:  {color2}
-dwm.foregroundSel:  {color0}
-dwm.border:         {color8}
-dwm.borderSel:      {color2}
