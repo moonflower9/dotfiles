@@ -34,6 +34,17 @@ Then stow:
 stow -t ~/.config .
 ```
 
+## Post-install: zsh
+
+zsh loads its config from `$ZDOTDIR`. This repo expects it to point at
+`~/.config/zsh`, so add the following to `/etc/zsh/zshenv` once per machine:
+
+```
+echo 'export ZDOTDIR="$HOME/.config/zsh"' | sudo tee -a /etc/zsh/zshenv
+```
+
+Without this, zsh will not load the stowed config.
+
 ## Notes
 
 - Setup with the help of [Dreams of Autonomy](https://www.youtube.com/watch?v=y6XCebnB9gs).
